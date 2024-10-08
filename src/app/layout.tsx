@@ -1,4 +1,4 @@
-import { Header } from '@/components/layouts';
+import { Footer, Header } from '@/components/layouts';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '../styles/index.scss';
@@ -32,6 +32,7 @@ export default function RootLayout({
       <body className={`${involveFont.variable} ${gilroyFont.variable} font-helvetica`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
