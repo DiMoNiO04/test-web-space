@@ -44,7 +44,7 @@ const Slider: React.FC = () => {
     >
       {slides.map(({ id, title, description }) => (
         <SwiperSlide key={id} className={styles.slide}>
-          <h2 className="title">{title}</h2>
+          {id === 1 ? <h1 className="title">{title}</h1> : <h2 className="title">{title}</h2>}
           <p>{description}</p>
           <Button text="Узнать стоимость" nameClass={EButtonClass.DEF} isLink={false} />
         </SwiperSlide>
