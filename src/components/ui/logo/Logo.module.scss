@@ -1,7 +1,7 @@
 .logo {
   display: flex;
-    align-items: flex-end;
-    column-gap: 4px;
+  align-items: flex-end;
+  column-gap: 4px;
 }
 
 .icon {
@@ -15,7 +15,7 @@
 
 .strong,
 .text {
-text-wrap: nowrap;
+  text-wrap: nowrap;
   color: $bg100;
 }
 

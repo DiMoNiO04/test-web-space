@@ -7,3 +7,21 @@
   @include grid(2);
   width: fit-content;
 }
+
+@media (max-width: $tablet) {
+  .cards,
+  .cardsRow {
+    display: flex;
+  }
+
+  .cards {
+    overflow: scroll;
+    padding: 0 20px;
+    width: 100%;
+    @include noScrollLine;
+  }
+
+  .cardsRow:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+}

@@ -181,11 +181,15 @@ h6 {
   h6 {
     @include helvetica16;
   }
+
+  section {
+    margin-bottom: 72px;
+  }
 }
 
 .hero-slider {
   .swiper-pagination-bullet-active {
-      background-color: $accent500 !important;
-      width: 24px !important;
-    }
+    background-color: $accent500 !important;
+    width: 24px !important;
+  }
 }

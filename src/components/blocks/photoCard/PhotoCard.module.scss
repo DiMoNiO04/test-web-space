@@ -1,5 +1,7 @@
 .card {
-  @include sizes(272px, 272px);
+  @include sizes(100%, auto);
+  max-width: 272px;
+  aspect-ratio: 1 / 1;
   position: relative;
 }
 
@@ -12,4 +14,18 @@
   position: absolute;
   left: 24px;
   top: 24px;
+}
+
+@media (max-width: $tablet) {
+
+  .card {
+    min-width: 176px;
+      min-height: 176px;
+  }
+
+  .text {
+    @include gilroy22;
+    left: 16px;
+    top: 16px;
+  }
 }

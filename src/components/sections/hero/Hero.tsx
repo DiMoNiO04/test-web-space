@@ -5,7 +5,7 @@ import { HeroCards, Slider } from '@/components/blocks';
 const Hero: React.FC = () => {
   return (
     <section className={styles.section}>
-      <div className="container">
+      <div className={`container ${styles.cont}`}>
         <div className={styles.container}>
           <Slider />
           <HeroCards />

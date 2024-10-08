@@ -11,8 +11,8 @@
   @include gilroy20;
   color: $white;
   background-color: $accent500;
-  padding: 19px 8px;
   min-width: 231px;
+  height: 52px;
   text-align: center;
 
   @include hover {
@@ -35,8 +35,8 @@
   color: $white;
   background-color: transparent;
   border: 2px solid $accent500;
-    min-width: 231px;
-      text-align: center;
+  min-width: 231px;
+  text-align: center;
 
   @include hover {
     border-color: $accent300;

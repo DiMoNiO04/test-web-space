@@ -5,21 +5,20 @@ import styles from './Header.module.scss';
 import { AddressOffice, Button, EButtonClass, Logo, WorkTime } from '@/components/ui';
 import { PhoneIcon } from '@/components/icons';
 
-const SCROLL_THRESHOLD = 50;
+const SCROLL_THRESHOLD_DESKTOP = 50;
+const SCROLL_THRESHOLD_MOBILE = 10;
+const MOBILE_PX = 1023;
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > SCROLL_THRESHOLD) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      const scrollThreshold = window.innerWidth < MOBILE_PX ? SCROLL_THRESHOLD_MOBILE : SCROLL_THRESHOLD_DESKTOP;
+      setIsScrolled(window.scrollY > scrollThreshold);
     };
 
-    handleScroll();
+    handleScroll(); // Initial check
 
     window.addEventListener('scroll', handleScroll);
 

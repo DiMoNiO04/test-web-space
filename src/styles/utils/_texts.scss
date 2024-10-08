@@ -6,24 +6,29 @@
 }
 
 @mixin gilroy22 {
-    font-family: 'Gilroy', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    line-height: 28.6px;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 28.6px;
+
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
 }
 
 @mixin helvetica10 {
   font-family: 'Helvetica', sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 13px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
 }
 
 @mixin helvetica12 {
   font-family: 'Helvetica', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16.8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
 }
 
 @mixin helvetica14 {
@@ -58,15 +63,25 @@
 }
 
 @mixin helvetica26 {
-    font-family: Helvetica, sans-serif;
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 36.4px;
+  font-family: Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 36.4px;
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
 }
 
 @mixin involve64 {
-    font-family: 'Involve', sans-serif;
-    font-size: 64px;
-    font-weight: 500;
-    line-height: 83.2px;
+  font-family: 'Involve', sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 83.2px;
+
+  @media (max-width: $tablet) {
+    font-size: 28px;
+    line-height: 33.6px;
+  }
 }
