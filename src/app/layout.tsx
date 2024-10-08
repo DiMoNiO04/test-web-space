@@ -1,3 +1,4 @@
+import { Header } from '@/components/layouts';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
@@ -27,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${involveFont.variable} ${gilroyFont.variable} font-helvetica`}>{children}</body>
+      <body className={`${involveFont.variable} ${gilroyFont.variable} font-helvetica`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
