@@ -7,3 +7,11 @@
   @include helvetica16;
   color: $bg50;
 }
+
+@media (max-width: $tablet) {
+  .address {
+    br {
+      display: none;
+    }
+  }
+}

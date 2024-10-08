@@ -173,7 +173,12 @@ h2,
   margin-bottom: 40px;
 }
 
-
 h6 {
-  @include helvitica18;
+  @include helvetica18;
+}
+
+@media (max-width: $tablet) {
+  h6 {
+    @include helvetica16;
+  }
 }

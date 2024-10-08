@@ -14,7 +14,7 @@
 }
 
 .phone {
-  @include helvitica18;
+  @include helvetica18;
   @include transition(color);
   color: $white;
 

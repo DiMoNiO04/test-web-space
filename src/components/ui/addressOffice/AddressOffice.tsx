@@ -1,10 +1,14 @@
 import React from 'react';
 import styles from './AdressOffice.module.scss';
 
-const AddressOffice: React.FC = () => {
+interface IAddressOffice {
+  className?: string;
+}
+
+const AddressOffice: React.FC<IAddressOffice> = ({ className }) => {
   return (
-    <div className={styles.block}>
-      <h6 className="h6">Адрес офиса:</h6>
+    <div className={`${styles.block} ${className}`}>
+      <h6 className="h6">Адрес офиса</h6>
       <p className={styles.address}>
         РБ, г. Минск, <br /> ул. Ленина, 1
       </p>

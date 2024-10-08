@@ -1,8 +1,15 @@
 @mixin gilroy20 {
-    font-family: 'Gilroy', sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 24px;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+@mixin helvetica14 {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
 }
 
 @mixin helvetica16 {
@@ -10,11 +17,21 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 22.4px;
+
+  @media (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 18.2px;
+    }
 }
 
-@mixin helvitica18 {
-    font-family: 'Helvetica', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 23.4px;
+@mixin helvetica18 {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+      line-height: 22.4px;
+  }
 }

@@ -1,6 +1,10 @@
 .btn {
   cursor: pointer;
-  transition: color 0.2s ease, box-shadow 0.2s ease, border 0.2s ease, background-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    border 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .def {
@@ -14,7 +18,7 @@
   }
 
   &:focus {
-    box-shadow: 0px 0px 8px 0px #E975504D;
+    box-shadow: 0px 0px 8px 0px #e975504d;
   }
 
   &:disabled {
@@ -37,7 +41,7 @@
   }
 
   &:focus {
-    box-shadow: 0px 0px 8px 0px #E975504D;
+    box-shadow: 0px 0px 8px 0px #e975504d;
     border-color: $accent300;
   }
 
