@@ -1,0 +1,13 @@
+.slide {
+  h2 {
+    @include involve64;
+    margin-bottom: 16px;
+    color: $bg100;
+  }
+
+  p {
+    @include helvetica26;
+    color: $bg100;
+    margin-bottom: 32px;
+  }
+}

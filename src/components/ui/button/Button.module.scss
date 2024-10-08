@@ -12,6 +12,8 @@
   color: $white;
   background-color: $accent500;
   padding: 19px 8px;
+  min-width: 231px;
+  text-align: center;
 
   @include hover {
     background-color: $accent300;
@@ -33,7 +35,8 @@
   color: $white;
   background-color: transparent;
   border: 2px solid $accent500;
-  text-align: center;
+    min-width: 231px;
+      text-align: center;
 
   @include hover {
     border-color: $accent300;
