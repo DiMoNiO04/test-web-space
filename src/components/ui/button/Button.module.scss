@@ -1,0 +1,46 @@
+.btn {
+  cursor: pointer;
+  transition: color 0.2s ease, box-shadow 0.2s ease, border 0.2s ease, background-color 0.2s ease;
+}
+
+.def {
+  @include gilroy20;
+  color: $white;
+  background-color: $accent500;
+  padding: 19px 8px;
+
+  @include hover {
+    background-color: $accent300;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 8px 0px #E975504D;
+  }
+
+  &:disabled {
+    background-color: $grey;
+  }
+}
+
+.sec {
+  @include gilroy20;
+  color: $white;
+  background-color: transparent;
+  padding: 17px 6px;
+  border: 2px solid $accent500;
+
+  @include hover {
+    border-color: $accent300;
+    color: $accent300;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 8px 0px #E975504D;
+    border-color: $accent300;
+  }
+
+  &:disabled {
+    border-color: $grey;
+    color: $whiteSm;
+  }
+}

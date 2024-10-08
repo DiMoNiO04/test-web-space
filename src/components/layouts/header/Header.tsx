@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import { AddressOffice, Logo, WorkTime } from '@/components/ui';
+import { AddressOffice, Button, EButtonClass, Logo, WorkTime } from '@/components/ui';
 
 const Header: React.FC = () => {
   return (
@@ -11,11 +11,12 @@ const Header: React.FC = () => {
           <div className={styles.info}>
             <AddressOffice />
             <div className={styles.connection}>
-              <a href="tel:+375 99 999 99 99" className={styles.phone}>
+              <a href="tel:+375999999999" className={styles.phone}>
                 +375 99 999 99 99
               </a>
               <WorkTime />
             </div>
+            <Button text="Заказать звонок" nameClass={EButtonClass.SEC} isLink={false} />
           </div>
         </div>
       </div>
