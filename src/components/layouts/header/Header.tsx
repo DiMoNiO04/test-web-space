@@ -1,11 +1,33 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import styles from './Header.module.scss';
 import { AddressOffice, Button, EButtonClass, Logo, WorkTime } from '@/components/ui';
 import { PhoneIcon } from '@/components/icons';
 
+const SCROLL_THRESHOLD = 50;
+
 const Header: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > SCROLL_THRESHOLD) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scroll : ''}`}>
       <div className="container">
         <div className={styles.container}>
           <Logo />
