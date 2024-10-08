@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Header.module.scss';
 import { AddressOffice, Button, EButtonClass, Logo, WorkTime } from '@/components/ui';
+import { PhoneIcon } from '@/components/icons';
 
 const Header: React.FC = () => {
   return (
@@ -18,6 +19,9 @@ const Header: React.FC = () => {
             </div>
             <Button text="Заказать звонок" nameClass={EButtonClass.SEC} isLink={false} />
           </div>
+          <button className={styles.phoneBtn}>
+            <PhoneIcon />
+          </button>
         </div>
       </div>
     </header>

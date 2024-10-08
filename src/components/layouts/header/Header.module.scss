@@ -1,0 +1,52 @@
+.header {
+  border-bottom: 1px solid $bg50;
+  background-color: #000;
+}
+
+.container {
+  padding: 24px 0;
+  @include flexCenterBetween;
+}
+
+.info {
+  @include flexCenterBetween;
+  column-gap: 64px;
+}
+
+.phone {
+  @include helvitica18;
+  @include transition(color);
+  color: $white;
+
+  @include hover {
+    color: $bg50;
+  }
+}
+
+.connection {
+  @include flexColumn;
+  row-gap: 4px;
+}
+
+.phoneBtn {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .header {
+    border: none;
+  }
+
+  .container {
+    padding: 16px 0;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .phoneBtn {
+    @include sizes(32px, 32px);
+    display: block;
+  }
+}

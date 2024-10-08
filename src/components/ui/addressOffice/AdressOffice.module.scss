@@ -1,0 +1,9 @@
+.block {
+  @include flexColumn;
+  row-gap: 4px;
+}
+
+.address {
+  @include helvetica16;
+  color: $bg50;
+}

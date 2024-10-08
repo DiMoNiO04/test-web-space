@@ -1,6 +1,7 @@
 import { Header } from '@/components/layouts';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import '../styles/index.scss';
 
 const involveFont = localFont({
   src: '../../public/fonts/Involve/Involve-Medium.otf',

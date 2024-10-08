@@ -1,0 +1,6 @@
+.times {
+  li {
+    @include helvetica16;
+      color: $bg50;
+  }
+}

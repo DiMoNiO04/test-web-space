@@ -1,0 +1,9 @@
+.logo {
+  @include sizes(260px, 64px);
+}
+
+@media (max-width: $tablet) {
+  .logo {
+    @include sizes(160px, 40px)
+  }
+}

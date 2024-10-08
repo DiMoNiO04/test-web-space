@@ -117,10 +117,10 @@ html {
 }
 
 body {
-  @include bold40Playfair;
+  // @include bold40Playfair;
   @include flexColumn;
   font-family: var(--font-involve), var(--font-gilroy), Helvetica, sans-serif;
-  color: $black;
+  color: $white;
   margin: 0;
   padding: 0;
   background: $white;
@@ -142,19 +142,13 @@ main {
 }
 
 .container {
-  max-width: 1140px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.container-no-padding {
-  max-width: 1140px;
-  padding: 0;
+  max-width: 1396px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
 section {
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 }
 
 textarea {
@@ -169,12 +163,17 @@ svg {
 
 h1,
 .title {
-  @include bold60Playfair;
+  // @include bold60Playfair;
   margin-bottom: 30px;
 }
 
 h2,
 .subtitle {
-  @include bold36Playfair;
+  // @include bold36Playfair;
   margin-bottom: 40px;
+}
+
+
+h6 {
+  @include helvitica18;
 }
