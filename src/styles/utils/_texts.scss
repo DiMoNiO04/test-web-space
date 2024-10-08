@@ -5,6 +5,13 @@
   line-height: 24px;
 }
 
+@mixin gilroy22 {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 28.6px;
+}
+
 @mixin helvetica10 {
   font-family: 'Helvetica', sans-serif;
     font-size: 10px;

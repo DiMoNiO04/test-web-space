@@ -1,0 +1,9 @@
+.cards {
+  @include grid(1);
+  width: fit-content;
+}
+
+.cardsRow {
+  @include grid(2);
+  width: fit-content;
+}

@@ -54,5 +54,22 @@
 .arrow {
   @include flexCenterStart;
   @include helvetica18;
+  @include transition(color);
   column-gap: 4px;
+  color: $white;
+  width: fit-content;
+
+  svg {
+    @include sizes(24px, 24px);
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+
+  @include hover {
+    color: $accent500;
+
+    svg {
+      transform: translate(2px, -2px);
+    }
+  }
 }

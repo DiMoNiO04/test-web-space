@@ -42,6 +42,7 @@ const Button: React.FC<IButton> = ({
     return (
       <Link href={linkUrl} className={className} target={isExternal ? '_blank' : '_self'}>
         {text}
+        {nameClass === EButtonClass.ARROW && <UpRightArrow />}
       </Link>
     );
   }

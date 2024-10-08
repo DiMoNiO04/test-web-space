@@ -1,0 +1,12 @@
+.card {
+  @include sizes(272px, 272px);
+  @include flexColumn;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $accent2600;
+  padding: 24px;
+}
+
+.text {
+  @include gilroy22;
+}
