@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './Button.module.scss';
+import { UpRightArrow } from '@/components/icons';
 
 export enum EButtonClass {
   DEF = 'def',
@@ -48,6 +49,7 @@ const Button: React.FC<IButton> = ({
   return (
     <button type={typeBtn} className={className} disabled={isDisabled} onClick={handle}>
       {text}
+      {nameClass === EButtonClass.ARROW && <UpRightArrow />}
     </button>
   );
 };

@@ -50,3 +50,9 @@
     color: $whiteSm;
   }
 }
+
+.arrow {
+  @include flexCenterStart;
+  @include helvetica18;
+  column-gap: 4px;
+}

@@ -1,6 +1,11 @@
 .header {
   border-bottom: 1px solid $bg50;
-  background-color: #000;
+  background-color: transparent;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 .container {
