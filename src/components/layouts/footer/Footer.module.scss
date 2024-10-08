@@ -16,7 +16,6 @@
 .text {
   @include helvetica16;
   color: $bg100;
-  text-align: center;
 }
 
 .center {
@@ -66,7 +65,11 @@
     align-items: center;
     margin-bottom: 36px;
   }
-  
+
+  .text {
+    text-align: center;
+  }
+
   .center {
     align-items: center;
     margin-bottom: 24px;
