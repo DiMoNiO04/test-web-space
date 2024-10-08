@@ -3,6 +3,7 @@
 import React from 'react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Button, EButtonClass } from '@/components/ui';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,7 +11,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 import styles from './Slider.module.scss';
-import { Button, EButtonClass } from '@/components/ui';
 
 const slides = [
   {
@@ -40,7 +40,7 @@ const Slider: React.FC = () => {
       loop={true}
       spaceBetween={30}
       autoplay={{ delay: 4000 }}
-      className={styles.swiper}
+      className={`${styles.swiper} hero-slider`}
     >
       {slides.map(({ id, title, description }) => (
         <SwiperSlide key={id} className={styles.slide}>

@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   @include sizes(100%, 100vh);
   padding: 260px 0 160px;
+  position: relative;
 }
 
 .container {
