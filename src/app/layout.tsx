@@ -1,16 +1,18 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import './globals.css';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
+const involveFont = localFont({
+  src: '../../public/fonts/Involve/Involve-Medium.otf',
+  variable: '--font-involve',
+  weight: '500',
+  style: 'normal',
 });
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+
+const gilroyFont = localFont({
+  src: '../../public/fonts/Gilroy/Gilroy-Bold.woff',
+  variable: '--font-gilroy',
+  weight: '800',
+  style: 'normal',
 });
 
 export const metadata: Metadata = {
@@ -24,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+    <html lang="ru">
+      <body className={`${involveFont.variable} ${gilroyFont.variable} font-helvetica`}>{children}</body>
     </html>
   );
 }

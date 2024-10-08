@@ -119,6 +119,7 @@ html {
 body {
   @include bold40Playfair;
   @include flexColumn;
+  font-family: var(--font-involve), var(--font-gilroy), Helvetica, sans-serif;
   color: $black;
   margin: 0;
   padding: 0;
@@ -130,6 +131,10 @@ body {
   &.hidden {
     overflow: hidden;
   }
+}
+
+.font-helvetica {
+  font-family: Helvetica, sans-serif;
 }
 
 main {
