@@ -1,0 +1,16 @@
+.container {
+  @include grid(2);
+  column-gap: 36px;
+}
+
+.title {
+  @include gilroy46;
+  color: $accent2700;
+  margin-bottom: 8px;
+}
+
+.description {
+  @include helvetica18;
+  color: $accent2700;
+  max-width: 544px;
+}
