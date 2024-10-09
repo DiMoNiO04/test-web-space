@@ -1,0 +1,44 @@
+.input,
+.textarea {
+  @include helvetica18;
+  border: 1px solid $accent2700;
+  padding: 20px 24px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  width: 100%;
+  max-width: 428px;
+
+  &:disabled {
+    border-color: $grey;
+  }
+
+  &:focus {
+    border-color: $accent500;
+  }
+
+  &:valid:not(:placeholder-shown) {
+    border-color: $accent500;
+    color: $accent2700;
+  }
+}
+
+.textarea {
+  height: 120px;
+}
+
+.block {
+  @include mb(16px);
+}
+
+.blockFlex {
+  @include flexStartBetween;
+}
+
+.label {
+  @include helvetica18;
+  margin-top: 20px;
+  color: $accent2700;
+
+  span {
+    color: $accent500;
+  }
+}
