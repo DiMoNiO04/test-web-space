@@ -2,16 +2,14 @@
   h1,
   h2 {
     @include involve64;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     color: $bg100;
-    hyphens: auto;
   }
 
   p {
     @include helvetica26;
     color: $bg100;
-    margin-bottom: 32px;
-    hyphens: auto;
+    margin-bottom: 24px;
   }
 }
 
@@ -54,7 +52,7 @@
     h1,
     h2 {
       @include involve64;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     p {

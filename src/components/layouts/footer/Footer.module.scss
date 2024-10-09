@@ -3,7 +3,8 @@
 }
 
 .container {
-  @include grid(3);
+  display: grid;
+  grid-template-columns: 0.55fr 0.35fr 1fr;
   column-gap: 166px;
   padding: 64px 0;
 }
@@ -15,8 +16,7 @@
   @include flexColumn;
 }
 
-.left,
-.address {
+.left {
   row-gap: 16px;
 }
 

@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <p className={styles.text}>© 2024 ООО “Строительные решения”</p>
           </div>
           <div className={styles.center}>
-            <AddressOffice className={styles.address} />
+            <AddressOffice />
             <WorkTime />
           </div>
           <div className={styles.right}>

@@ -12,7 +12,7 @@
   display: flex;
   align-items: flex-start;
   cursor: pointer;
-  column-gap: 8px;
+  column-gap: 12px;
   position: relative;
 }
 
@@ -42,5 +42,6 @@
 @media (max-width: $tablet) {
   .label {
     align-items: center;
+    column-gap: 4px;
   }
 }

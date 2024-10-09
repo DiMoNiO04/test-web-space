@@ -6,7 +6,7 @@
 .title {
   @include gilroy46;
   color: $accent2700;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .description {
@@ -39,16 +39,23 @@
   }
 
   .img {
+    @include sizes(100%, 200px);
     order: 1;
+  }
+
+  .title {
+    margin-bottom: 10px;
   }
 
   .description {
     @include helvetica15;
     max-width: 100%;
+    margin-bottom: 20px;
   }
 
   .inputs {
     margin-bottom: 24px;
+    row-gap: 12px;
   }
 
   .checkboxs {

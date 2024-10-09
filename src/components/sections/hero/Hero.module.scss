@@ -26,6 +26,6 @@
 
   .container {
     @include flexColumn;
-    row-gap: 24px;
+    row-gap: 16px;
   }
 }

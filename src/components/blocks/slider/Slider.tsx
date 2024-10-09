@@ -42,7 +42,7 @@ const Slider: React.FC = () => {
       speed={1000}
       loop={true}
       spaceBetween={30}
-      autoplay={{ delay: 4000 }}
+      // autoplay={{ delay: 4000 }}
       className={`${styles.swiper} hero-slider`}
     >
       {slides.map(({ id, title, description }) => (

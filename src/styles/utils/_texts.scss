@@ -112,6 +112,11 @@
   font-weight: 500;
   line-height: 83.2px;
 
+  @media (max-width: $laptop) {
+    font-size: 48px;
+    line-height: 54px;
+  }
+
   @media (max-width: $tablet) {
     font-size: 28px;
     line-height: 33.6px;

@@ -8,7 +8,7 @@ interface IAddressOffice {
 const AddressOffice: React.FC<IAddressOffice> = ({ className }) => {
   return (
     <div className={`${styles.block} ${className}`}>
-      <h6 className="h6">Адрес офиса</h6>
+      <h6 className={styles.title}>Адрес офиса</h6>
       <p className={styles.address}>
         РБ, г. Минск, <br /> ул. Ленина, 1
       </p>
