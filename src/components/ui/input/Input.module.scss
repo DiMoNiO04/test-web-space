@@ -31,11 +31,14 @@
   .textarea {
       max-width: 65%;
   }
+
+  .label {
+      margin-top: 20px;
+  }
 }
 
 .label {
   @include helvetica18;
-  margin-top: 20px;
   color: $accent2700;
 
   span {
@@ -47,10 +50,10 @@
   .blockFlex {
     @include flexColumn;
     row-gap: 8px;
-  }
 
-  .label {
-    margin: 0;
+    .label {
+        margin: 0;
+      }
   }
 
   .input,
