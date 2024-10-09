@@ -11,7 +11,7 @@ const involveFont = localFont({
 });
 
 const gilroyFont = localFont({
-  src: '../../public/fonts/Gilroy/Gilroy-Bold.woff',
+  src: '../../public/fonts/Gilroy/Gilroy-ExtraBold.ttf',
   variable: '--font-gilroy',
   weight: '800',
   style: 'normal',

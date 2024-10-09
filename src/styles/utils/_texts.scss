@@ -1,12 +1,12 @@
 @mixin gilroy20 {
-  font-family: 'Gilroy', sans-serif;
+  font-family: var(--font-gilroy);
   font-size: 20px;
   font-weight: 800;
   line-height: 24px;
 }
 
 @mixin gilroy22 {
-  font-family: 'Gilroy', sans-serif;
+  font-family: var(--font-gilroy);
   font-size: 22px;
   font-weight: 800;
   line-height: 28.6px;
@@ -18,7 +18,7 @@
 }
 
 @mixin gilroy32 {
-  font-family: 'Gilroy', sans-serif;
+  font-family: var(--font-gilroy);
   font-size: 32px;
   font-weight: 800;
   line-height: 41.6px;
@@ -30,7 +30,7 @@
 }
 
 @mixin gilroy46 {
-  font-family: 'Gilroy', sans-serif;
+  font-family: var(--font-gilroy);
   font-size: 48px;
   font-weight: 800;
   line-height: 62.4px;
@@ -42,35 +42,35 @@
 }
 
 @mixin helvetica10 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: var(--font-helvetica);
   font-size: 10px;
   font-weight: 400;
   line-height: 13px;
 }
 
 @mixin helvetica12 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: var(--font-helvetica);
   font-size: 12px;
   font-weight: 400;
   line-height: 16.8px;
 }
 
 @mixin helvetica14 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: var(--font-helvetica);
   font-size: 14px;
   font-weight: 400;
   line-height: 18.2px;
 }
 
 @mixin helvetica15 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: var(--font-helvetica);
   font-size: 15px;
   font-weight: 400;
   line-height: 19.5px;
 }
 
 @mixin helvetica16 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: var(--font-helvetica);
   font-size: 16px;
   font-weight: 400;
   line-height: 22.4px;
@@ -82,7 +82,7 @@
 }
 
 @mixin helvetica18 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: var(--font-helvetica);
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -107,7 +107,7 @@
 }
 
 @mixin involve64 {
-  font-family: 'Involve', sans-serif;
+  font-family: var(--font-involve);
   font-size: 64px;
   font-weight: 500;
   line-height: 83.2px;
