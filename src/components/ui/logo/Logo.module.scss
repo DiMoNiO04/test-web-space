@@ -1,0 +1,51 @@
+.logo {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 4px;
+}
+
+.icon {
+  @include sizes(64px, 64px);
+  flex-shrink: 0;
+}
+
+.block {
+  margin-bottom: 4px;
+}
+
+.strong,
+.text {
+  text-wrap: nowrap;
+  color: $bg100;
+}
+
+.strong {
+  @include helvetica16;
+}
+
+.text {
+  @include helvetica12;
+}
+
+@media (max-width: $tablet) {
+  .icon {
+    @include sizes(42px, 42px);
+  }
+
+  .block {
+    margin-bottom: 3px;
+  }
+
+  .logo {
+    row-gap: 2px;
+  }
+
+  .text {
+    @include helvetica10;
+  }
+
+  .strong {
+    @include helvetica12;
+    line-height: 15.6px;
+  }
+}

@@ -1,0 +1,79 @@
+.btn {
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    border 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.def {
+  @include gilroy20;
+  color: $white;
+  background-color: $accent500;
+  min-width: 231px;
+  height: 52px;
+  text-align: center;
+
+  @include hover {
+    background-color: $accent300;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 8px 0px #e975504d;
+  }
+
+  &:disabled {
+    background-color: $grey;
+    cursor: default;
+  }
+}
+
+.sec {
+  @include gilroy20;
+  min-width: 231px;
+  height: 52px;
+  color: $white;
+  background-color: transparent;
+  border: 2px solid $accent500;
+  min-width: 231px;
+  text-align: center;
+
+  @include hover {
+    border-color: $accent300;
+    color: $accent300;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 8px 0px #e975504d;
+    border-color: $accent300;
+  }
+
+  &:disabled {
+    border-color: $grey;
+    color: $whiteSm;
+  }
+}
+
+.arrow {
+  @include flexCenterStart;
+  @include helvetica18;
+  @include transition(color);
+  column-gap: 4px;
+  color: $white;
+  width: fit-content;
+
+  svg {
+    @include sizes(24px, 24px);
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+
+  @include hover {
+    color: $accent500;
+
+    svg {
+      transform: translate(2px, -2px);
+    }
+  }
+}

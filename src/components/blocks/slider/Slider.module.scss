@@ -1,0 +1,67 @@
+.slide {
+  h1,
+  h2 {
+    @include involve64;
+    margin-bottom: 24px;
+    color: $bg100;
+  }
+
+  p {
+    @include helvetica26;
+    color: $bg100;
+    margin-bottom: 24px;
+  }
+}
+
+.swiper {
+  position: static;
+  width: 100%;
+  max-width: 747px;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 64px !important;
+  display: flex;
+  column-gap: 12px;
+  justify-content: center;
+
+  span {
+    @include sizes(8px, 8px);
+    margin: 0 !important;
+    opacity: 1;
+    background-color: $white;
+    border-radius: 16px;
+    transition:
+      width 0.2s ease,
+      background-color 0.2s ease;
+
+    @include hover {
+      background-color: $accent500;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .swiper {
+    padding: 0 20px;
+    max-width: 100%;
+  }
+
+  .slide {
+    h1,
+    h2 {
+      @include involve64;
+      margin-bottom: 16px;
+    }
+
+    p {
+      @include helvetica26;
+      margin-bottom: 24px;
+    }
+  }
+
+  .pagination {
+    bottom: 24px !important;
+  }
+}

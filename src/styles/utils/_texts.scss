@@ -1,0 +1,124 @@
+@mixin gilroy20 {
+  font-family: var(--font-gilroy);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+@mixin gilroy22 {
+  font-family: var(--font-gilroy);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 28.6px;
+
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+}
+
+@mixin gilroy32 {
+  font-family: var(--font-gilroy);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 41.6px;
+
+  @media (max-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@mixin gilroy46 {
+  font-family: var(--font-gilroy);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 62.4px;
+
+  @media (max-width: $tablet) {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+}
+
+@mixin helvetica10 {
+  font-family: var(--font-helvetica);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+@mixin helvetica12 {
+  font-family: var(--font-helvetica);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+
+@mixin helvetica14 {
+  font-family: var(--font-helvetica);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+}
+
+@mixin helvetica15 {
+  font-family: var(--font-helvetica);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19.5px;
+}
+
+@mixin helvetica16 {
+  font-family: var(--font-helvetica);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+
+  @media (max-width: $tablet) {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+}
+
+@mixin helvetica18 {
+  font-family: var(--font-helvetica);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  letter-spacing: 0.5px;
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+}
+
+@mixin helvetica26 {
+  font-family: Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 36.4px;
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+}
+
+@mixin involve64 {
+  font-family: var(--font-involve);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 83.2px;
+
+  @media (max-width: $laptop) {
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 28px;
+    line-height: 33.6px;
+  }
+}

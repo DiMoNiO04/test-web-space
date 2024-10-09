@@ -1,0 +1,70 @@
+.header {
+  border-bottom: 1px solid $bg50;
+  background-color: transparent;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: background-color 0.3s ease;
+}
+
+.scroll {
+  background-color: $accent2600;
+}
+
+.container,
+.info {
+  @include flexCenterBetween;
+}
+
+.container {
+  padding: 24px 0;
+}
+
+.info {
+  column-gap: 64px;
+}
+
+.phone {
+  @include helvetica18;
+  @include transition(color);
+  color: $white;
+
+  @include hover {
+    color: $bg50;
+  }
+}
+
+.connection {
+  @include flexColumn;
+  row-gap: 4px;
+}
+
+.phoneBtn {
+  display: none;
+}
+
+.address {
+  width: 145px;
+  row-gap: 4px;
+}
+
+@media (max-width: $tablet) {
+  .header {
+    border: none;
+  }
+
+  .container {
+    padding: 16px 0;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .phoneBtn {
+    @include sizes(32px, 32px);
+    display: block;
+  }
+}

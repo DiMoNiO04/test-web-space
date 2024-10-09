@@ -1,0 +1,31 @@
+.section {
+  background-image: url('../../../../public/images/hero.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  padding: 260px 0 160px;
+  position: relative;
+}
+
+.container {
+  @include flexStartBetween;
+  column-gap: 65px;
+  overflow: hidden;
+}
+
+@media (max-width: $tablet) {
+  .section {
+    padding: 82px 0 68px;
+    overflow: hidden;
+  }
+
+  .cont {
+    padding: 0;
+  }
+
+  .container {
+    @include flexColumn;
+    row-gap: 16px;
+  }
+}

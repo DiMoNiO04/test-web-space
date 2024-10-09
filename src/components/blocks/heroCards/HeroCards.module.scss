@@ -1,0 +1,30 @@
+.cards,
+.cardsRow {
+  width: fit-content;
+}
+
+.cards {
+  @include grid(1);
+}
+
+.cardsRow {
+  @include grid(2);
+}
+
+@media (max-width: $tablet) {
+  .cards,
+  .cardsRow {
+    display: flex;
+  }
+
+  .cards {
+    @include noScrollLine;
+    overflow: scroll;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .cardsRow:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+}

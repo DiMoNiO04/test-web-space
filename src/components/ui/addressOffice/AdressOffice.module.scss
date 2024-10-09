@@ -1,0 +1,29 @@
+.block {
+  @include flexColumn;
+  row-gap: 16px;
+}
+
+.address {
+  @include helvetica16;
+  color: $bg50;
+}
+
+.title {
+  @include helvetica18;
+}
+
+@media (max-width: $tablet) {
+  .address {
+    br {
+      display: none;
+    }
+  }
+
+  .block {
+    row-gap: 12px;
+  }
+
+  .title {
+    text-align: center;
+  }
+}

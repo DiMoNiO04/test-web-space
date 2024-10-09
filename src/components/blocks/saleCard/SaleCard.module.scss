@@ -1,0 +1,26 @@
+.card {
+  @include sizes(100%, auto);
+  @include flexColumn;
+  max-width: 272px;
+  aspect-ratio: 1 / 1;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $accent2600;
+  padding: 24px;
+}
+
+.text {
+  @include gilroy22;
+}
+
+@media (max-width: $tablet) {
+  .card {
+    padding: 16px;
+    min-width: 176px;
+    min-height: 176px;
+  }
+
+  .text {
+    @include gilroy22;
+  }
+}
