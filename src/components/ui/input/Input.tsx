@@ -1,4 +1,5 @@
 import React from 'react';
+import { InputMask } from '@react-input/mask';
 import styles from './Input.module.scss';
 
 export enum EInputType {
@@ -18,7 +19,7 @@ interface IInputProps {
   label: string;
   name?: string;
   value: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; // Обновлено для поддержки textarea
+  onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   placeholder?: string;
   required?: boolean;
   type?: EInputType;
@@ -49,6 +50,17 @@ const Input: React.FC<IInputProps> = ({
           placeholder={placeholder}
           required={required}
           className={styles.textarea}
+          autoComplete="off"
+        />
+      ) : type === EInputType.PHONE ? (
+        <InputMask
+          mask="+375 (__) ___-__-__"
+          onChange={onChange}
+          placeholder={placeholder}
+          required={required}
+          replacement={{ _: /\d/ }}
+          className={styles.input}
+          autoComplete="off"
         />
       ) : (
         <input
@@ -59,7 +71,7 @@ const Input: React.FC<IInputProps> = ({
           placeholder={placeholder}
           required={required}
           className={styles.input}
-          pattern="[+]{1}[0-9]{11,14}"
+          autoComplete="off"
         />
       )}
     </div>

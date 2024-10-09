@@ -42,6 +42,10 @@
   display: none;
 }
 
+.address {
+  width: 145px;
+}
+
 @media (max-width: $tablet) {
   .header {
     border: none;

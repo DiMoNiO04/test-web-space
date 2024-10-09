@@ -133,10 +133,6 @@ body {
   }
 }
 
-.font-helvetica {
-  font-family: Helvetica, sans-serif;
-}
-
 main {
   flex: 1;
 }
@@ -161,20 +157,15 @@ svg {
   stroke-linecap: round;
 }
 
-h1,
-.title {
-  // @include bold60Playfair;
-  margin-bottom: 30px;
-}
-
-h2,
-.subtitle {
-  // @include bold36Playfair;
-  margin-bottom: 40px;
-}
-
 h6 {
   @include helvetica18;
+}
+
+.hero-slider {
+  .swiper-pagination-bullet-active {
+    background-color: $accent500 !important;
+    width: 24px !important;
+  }
 }
 
 @media (max-width: $tablet) {
@@ -184,12 +175,5 @@ h6 {
 
   section {
     margin-bottom: 72px;
-  }
-}
-
-.hero-slider {
-  .swiper-pagination-bullet-active {
-    background-color: $accent500 !important;
-    width: 24px !important;
   }
 }

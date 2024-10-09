@@ -33,7 +33,7 @@ const Header: React.FC = () => {
         <div className={styles.container}>
           <Logo />
           <div className={styles.info}>
-            <AddressOffice />
+            <AddressOffice className={styles.address} />
             <div className={styles.connection}>
               <a href="tel:+375999999999" className={styles.phone}>
                 +375 99 999 99 99

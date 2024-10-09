@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@react-input/mask": "^1.2.11",
     "@types/yandex-maps": "^2.1.36",
     "next": "14.2.14",
     "react": "^18",

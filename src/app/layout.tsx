@@ -17,6 +17,13 @@ const gilroyFont = localFont({
   style: 'normal',
 });
 
+const helveticaFont = localFont({
+  src: '../../public/fonts/Helvetica/helvetica_regular.otf',
+  variable: '--font-helvetica',
+  weight: '400',
+  style: 'normal',
+});
+
 export const metadata: Metadata = {
   title: 'Строительные решения',
   description: 'Создадим ваш идеальный дом в установленные сроки и с 10-летней гарантией | Строительные решения',
@@ -29,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${involveFont.variable} ${gilroyFont.variable} font-helvetica`}>
+      <body className={`${involveFont.variable} ${gilroyFont.variable} ${helveticaFont.variable}`}>
         <ModalProvider>
           <Header />
           {children}
