@@ -7,7 +7,7 @@ export default function Home() {
       <Hero />
       <Map />
       <Questions />
-      {/* <Modal /> */}
+      <Modal />
     </>
   );
 }

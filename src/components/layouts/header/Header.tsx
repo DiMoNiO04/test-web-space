@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styles from './Header.module.scss';
 import { AddressOffice, Button, EButtonClass, Logo, WorkTime } from '@/components/ui';
 import { PhoneIcon } from '@/components/icons';
+import { ModalContext } from '@/context';
 
 const SCROLL_THRESHOLD_DESKTOP = 50;
 const SCROLL_THRESHOLD_MOBILE = 10;
@@ -11,6 +12,7 @@ const MOBILE_PX = 1023;
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const context = useContext(ModalContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +20,7 @@ const Header: React.FC = () => {
       setIsScrolled(window.scrollY > scrollThreshold);
     };
 
-    handleScroll(); // Initial check
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
 
@@ -38,9 +40,9 @@ const Header: React.FC = () => {
               </a>
               <WorkTime />
             </div>
-            <Button text="Заказать звонок" nameClass={EButtonClass.SEC} isLink={false} />
+            <Button text="Заказать звонок" nameClass={EButtonClass.SEC} isLink={false} handle={context?.openModal} />
           </div>
-          <button className={styles.phoneBtn}>
+          <button className={styles.phoneBtn} onClick={context?.openModal}>
             <PhoneIcon />
           </button>
         </div>

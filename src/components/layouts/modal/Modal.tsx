@@ -1,23 +1,27 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useContext, useState, useRef, useEffect } from 'react';
 import styles from './Modal.module.scss';
 import { Button, Checkbox, EButtonClass, EButtonType, Input } from '@/components/ui';
 import { EInputType } from '@/components/ui/input/Input';
 import Image from 'next/image';
 import { CloseIcon } from '@/components/icons';
+import { ModalContext } from '@/context';
 
 interface IFormData {
   phone: string | null;
   comment: string | null;
-  isAgree: boolean;
+  isChecked: boolean;
 }
 
 const Modal: React.FC = () => {
+  const context = useContext(ModalContext);
+  const modalInnerRef = useRef<HTMLDivElement | null>(null);
+
   const [formData, setFormData] = useState<IFormData>({
     phone: null,
     comment: null,
-    isAgree: false,
+    isChecked: false,
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -38,10 +42,28 @@ const Modal: React.FC = () => {
     }));
   };
 
+  const handleClickOutside = (e: MouseEvent) => {
+    if (modalInnerRef.current && !modalInnerRef.current.contains(e.target as Node)) {
+      context?.closeModal();
+    }
+  };
+
+  useEffect(() => {
+    if (context?.isModalOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [context?.isModalOpen]);
+
   return (
-    <div className={styles.modal}>
-      <div className={styles.modalInner}>
-        <button className={styles.closeBtn} type="button">
+    <div className={`${styles.modal} ${context?.isModalOpen && styles.open}`}>
+      <div className={styles.modalInner} ref={modalInnerRef}>
+        <button className={styles.closeBtn} type="button" onClick={context?.closeModal}>
           <CloseIcon />
         </button>
         <div className={styles.img}>
@@ -77,8 +99,8 @@ const Modal: React.FC = () => {
           <div className={styles.checkboxs}>
             <Checkbox
               label="Согласие на обработку персональных данных"
-              checked={formData.isAgree}
-              name="isAgree"
+              checked={formData.isChecked}
+              name="isChecked"
               onChange={handleCheckboxChange}
             />
             <Button nameClass={EButtonClass.DEF} typeBtn={EButtonType.SUBMIT} text="Отправить" isLink={false} />

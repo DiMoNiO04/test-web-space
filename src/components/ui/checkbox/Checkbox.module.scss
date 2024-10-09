@@ -28,7 +28,7 @@
   display: none;
 }
 
-.block input:checked+label::after {
+.block input:checked + label::after {
   content: '';
   @include sizes(9px, 16px);
   position: absolute;

@@ -3,7 +3,9 @@
   @include helvetica18;
   border: 1px solid $accent2700;
   padding: 20px 24px;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
   width: 100%;
 
   &:disabled {
@@ -27,13 +29,13 @@
 .blockFlex {
   @include flexStartBetween;
 
-  .input, 
+  .input,
   .textarea {
-      max-width: 65%;
+    max-width: 65%;
   }
 
   .label {
-      margin-top: 20px;
+    margin-top: 20px;
   }
 }
 
@@ -52,8 +54,13 @@
     row-gap: 8px;
 
     .label {
-        margin: 0;
-      }
+      margin: 0;
+    }
+
+        .input,
+        .textarea {
+          max-width: 100%;
+        }
   }
 
   .input,

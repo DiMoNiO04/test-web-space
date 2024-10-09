@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button, EButtonClass } from '@/components/ui';
@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 import styles from './Slider.module.scss';
+import { ModalContext } from '@/context';
 
 const slides = [
   {
@@ -31,6 +32,8 @@ const slides = [
 ];
 
 const Slider: React.FC = () => {
+  const context = useContext(ModalContext);
+
   return (
     <Swiper
       modules={[Pagination, Autoplay]}
@@ -46,7 +49,7 @@ const Slider: React.FC = () => {
         <SwiperSlide key={id} className={styles.slide}>
           {id === 1 ? <h1 className="title">{title}</h1> : <h2 className="title">{title}</h2>}
           <p>{description}</p>
-          <Button text="Узнать стоимость" nameClass={EButtonClass.DEF} isLink={false} />
+          <Button text="Узнать стоимость" nameClass={EButtonClass.DEF} isLink={false} handle={context?.openModal} />
         </SwiperSlide>
       ))}
       <div className={`${styles.pagination} swiper-pagination`}></div>

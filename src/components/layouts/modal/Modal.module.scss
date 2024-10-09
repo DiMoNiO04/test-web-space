@@ -2,11 +2,21 @@
   position: fixed;
   @include fullSize;
   @include flexCenter;
-  background: #011B1B99;
-  z-index: 100;
+  background: #011b1b99;
+  z-index: -100;
+  @include hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    z-index 0.3s ease;
   top: 0;
   left: 0;
   padding: 24px 20px;
+}
+
+.open {
+  z-index: 100;
+  @include visible;
 }
 
 .modalInner {
@@ -59,7 +69,7 @@
 .description {
   @include helvetica16;
   text-align: center;
-    color: $accent2700;
+  color: $accent2700;
 }
 
 .inputs {
@@ -120,5 +130,4 @@
     row-gap: 12px;
     align-items: flex-start;
   }
-
 }

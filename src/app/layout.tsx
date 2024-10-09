@@ -1,4 +1,4 @@
-import { Footer, Header } from '@/components/layouts';
+import { Footer, Header, ModalProvider } from '@/components/layouts';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '../styles/index.scss';
@@ -30,9 +30,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${involveFont.variable} ${gilroyFont.variable} font-helvetica`}>
-        <Header />
-        {children}
-        <Footer />
+        <ModalProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   );
