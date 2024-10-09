@@ -36,7 +36,7 @@ const Input: React.FC<IInputProps> = ({
   isFlex = false,
 }) => {
   return (
-    <div className={`${styles.block} ${isFlex && styles.blockFlex}`}>
+    <div className={`${styles.block} ${isFlex ? styles.blockFlex : ''}`}>
       <p className={styles.label}>
         {label}
         <span>{required ? '*' : ''}</span>

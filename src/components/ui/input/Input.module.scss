@@ -25,10 +25,6 @@
   height: 120px;
 }
 
-.block {
-  @include mb(16px);
-}
-
 .blockFlex {
   @include flexStartBetween;
 }
