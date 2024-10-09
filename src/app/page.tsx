@@ -1,3 +1,4 @@
+import { Modal } from '@/components/layouts';
 import { Hero, Map, Questions } from '@/components/sections';
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
       <Hero />
       <Map />
       <Questions />
+      <Modal />
     </>
   );
 }

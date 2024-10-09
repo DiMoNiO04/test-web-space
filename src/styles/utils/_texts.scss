@@ -17,6 +17,13 @@
   }
 }
 
+@mixin gilroy32 {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 41.6px;
+}
+
 @mixin gilroy46 {
   font-family: 'Gilroy', sans-serif;
   font-size: 48px;
