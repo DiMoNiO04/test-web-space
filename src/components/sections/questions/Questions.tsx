@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Button, Checkbox, EButtonClass, EButtonType, Input } from '@/components/ui';
+import { Button, Checkbox, EButtonClass, EButtonType, Input, Notification } from '@/components/ui';
 import { EInputType } from '@/components/ui/input/Input';
+import { useFormSubmit } from '@/hooks';
 import styles from './Questions.module.scss';
-import { sendMessage } from '@/api/telegram';
 
 interface IFormData {
   phone: string | null;
@@ -14,14 +14,13 @@ interface IFormData {
 }
 
 const Questions: React.FC = () => {
-  const [isSending, setIsSending] = useState<boolean>(false);
   const [formData, setFormData] = useState<IFormData>({
     phone: null,
     comment: null,
     isAgree: false,
   });
-  const [isSubmitSuccess, setIsSubmitSuccess] = useState<boolean>(false);
-  const [isSubmitNoSuccess, setIsSubmitNoSuccess] = useState<boolean>(false);
+
+  const { isSending, isSubmitSuccess, isSubmitNoSuccess, handleSubmit } = useFormSubmit();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -37,26 +36,6 @@ const Questions: React.FC = () => {
       ...prevData,
       [name]: checked,
     }));
-  };
-
-  const handleSubmit = async () => {
-    setIsSending(true);
-    try {
-      const message = `
-        Поступила заявка с сайта! \n
-        Телефон: ${formData.phone}\n
-        Комментарий: ${formData.comment}
-      `;
-
-      await sendMessage(message);
-      resetForm();
-      setIsSubmitSuccess(true);
-    } catch (error) {
-      console.error(error);
-      setIsSubmitNoSuccess(false);
-    } finally {
-      setIsSending(false);
-    }
   };
 
   const resetForm = () => {
@@ -110,17 +89,18 @@ const Questions: React.FC = () => {
               />
               <Button
                 isDisabled={!formData.isAgree || !formData.phone || isSending}
-                handle={handleSubmit}
                 nameClass={EButtonClass.DEF}
                 typeBtn={EButtonType.SUBMIT}
                 text={isSending ? 'Отправка...' : 'Отправить'}
                 isLink={false}
+                handle={() => handleSubmit(formData, resetForm)}
               />
             </div>
-            {isSubmitSuccess && <p className={styles.successMessage}>Заявка успешно отправлена!</p>}
           </div>
         </div>
       </div>
+      {isSubmitSuccess && <Notification isSuccess={true} />}
+      {isSubmitNoSuccess && <Notification isSuccess={false} />}
     </section>
   );
 };
