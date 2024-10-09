@@ -19,9 +19,14 @@
 
 @mixin gilroy46 {
   font-family: 'Gilroy', sans-serif;
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 62.4px;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 62.4px;
+
+  @media (max-width: $tablet) {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
 }
 
 @mixin helvetica10 {
@@ -43,6 +48,13 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 18.2px;
+}
+
+@mixin helvetica15 {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19.5px;
 }
 
 @mixin helvetica16 {

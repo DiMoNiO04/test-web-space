@@ -31,3 +31,29 @@
   @include flexCenterBetween;
   column-gap: 40px;
 }
+
+@media (max-width: $tablet) {
+  .container {
+    @include grid(1);
+    row-gap: 32px;
+  }
+
+  .img {
+    order: 1;
+  }
+  
+  .description {
+    @include helvetica15;
+    max-width: 100%;
+  }
+
+  .inputs {
+    margin-bottom: 24px;
+  }
+
+  .checkboxs {
+    @include flexColumn;
+    align-items: flex-start;
+    row-gap: 32px;
+  }
+}

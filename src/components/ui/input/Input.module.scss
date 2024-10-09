@@ -5,7 +5,7 @@
   padding: 20px 24px;
   transition: color 0.2s ease, border-color 0.2s ease;
   width: 100%;
-  max-width: 428px;
+  max-width: 65%;
 
   &:disabled {
     border-color: $grey;
@@ -36,5 +36,22 @@
 
   span {
     color: $accent500;
+  }
+}
+
+@media (max-width: $tablet) {
+  .blockFlex {
+    @include flexColumn;
+    row-gap: 8px;
+  }
+
+  .label {
+    margin: 0;
+  }
+
+  .input,
+  .textarea {
+    max-width: 100%;
+    padding: 16px 24px;
   }
 }

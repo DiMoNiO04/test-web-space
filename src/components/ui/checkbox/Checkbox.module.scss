@@ -32,9 +32,15 @@
   content: '';
   @include sizes(9px, 16px);
   position: absolute;
-      top: 2px;
-        left: 7px;
+  top: 2px;
+  left: 7px;
   border: solid $accent500;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+
+@media (max-width: $tablet) {
+  .label {
+    align-items: center;
+  }
 }
