@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './PhotoCard.module.scss';
 import Image from 'next/image';
+import styles from './PhotoCard.module.scss';
 
 interface IPhotoCard {
   text: string;

@@ -6,8 +6,7 @@
 }
 
 .map {
-  width: 100%;
-  height: 100%;
+  @include fullSize;
   position: relative;
   z-index: 1;
 }

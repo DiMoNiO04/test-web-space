@@ -1,5 +1,5 @@
 import React from 'react';
-import IIcon from './interface';
+import { IIcon } from '.';
 
 const LogoIcon: React.FC<IIcon> = ({ className }) => {
   return (

@@ -1,8 +1,8 @@
 .card {
   @include sizes(100%, auto);
+  @include flexColumn;
   max-width: 272px;
   aspect-ratio: 1 / 1;
-  @include flexColumn;
   flex-direction: column;
   justify-content: space-between;
   background-color: $accent2600;

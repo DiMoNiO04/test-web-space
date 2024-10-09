@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './SaleCard.module.scss';
 import { Button, EButtonClass } from '@/components/ui';
+import styles from './SaleCard.module.scss';
 
 interface ISaleCard {
   text: string;

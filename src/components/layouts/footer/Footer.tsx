@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Footer.module.scss';
 import { AddressOffice, Logo, WorkTime } from '@/components/ui';
+import styles from './Footer.module.scss';
 
 const Footer: React.FC = () => {
   return (

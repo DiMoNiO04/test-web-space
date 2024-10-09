@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useContext, useEffect, useState } from 'react';
-import styles from './Header.module.scss';
 import { AddressOffice, Button, EButtonClass, Logo, WorkTime } from '@/components/ui';
 import { PhoneIcon } from '@/components/icons';
 import { ModalContext } from '@/context';
+import styles from './Header.module.scss';
 
 const SCROLL_THRESHOLD_DESKTOP = 50;
 const SCROLL_THRESHOLD_MOBILE = 10;

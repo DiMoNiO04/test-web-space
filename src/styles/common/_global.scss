@@ -1,11 +1,7 @@
 a {
-  text-decoration: none;
   @include transition(color);
-  line-height: 0;
-}
-
-a:hover {
   text-decoration: none;
+  line-height: 0;
 }
 
 input,
@@ -24,10 +20,7 @@ textarea {
   cursor: pointer;
   font: inherit;
 
-  &:focus {
-    outline: none;
-  }
-
+  &:focus,
   &:active {
     outline: none;
   }
@@ -44,14 +37,8 @@ h6 {
   padding: 0;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 img {
-  width: 100%;
-  height: 100%;
+  @include fullSize;
   display: block;
   object-fit: cover;
 }
@@ -66,14 +53,15 @@ button {
   line-height: 0;
 }
 
-ul {
+p,
+ul,
+ul li,
+fieldset {
   padding: 0;
   margin: 0;
 }
 
 ul li {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -89,12 +77,6 @@ input[type='number']::-webkit-outer-spin-button {
 
 input[type='number'] {
   -moz-appearance: textfield;
-}
-
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
 }
 
 html {
@@ -117,7 +99,6 @@ html {
 }
 
 body {
-  // @include bold40Playfair;
   @include flexColumn;
   font-family: var(--font-involve), var(--font-gilroy), Helvetica, sans-serif;
   color: $white;
@@ -157,10 +138,6 @@ svg {
   stroke-linecap: round;
 }
 
-h6 {
-  @include helvetica18;
-}
-
 .hero-slider {
   .swiper-pagination-bullet-active {
     background-color: $accent500 !important;
@@ -169,10 +146,6 @@ h6 {
 }
 
 @media (max-width: $tablet) {
-  h6 {
-    @include helvetica16;
-  }
-
   section {
     margin-bottom: 72px;
   }

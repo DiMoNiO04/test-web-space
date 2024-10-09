@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useContext, useState, useRef, useEffect } from 'react';
-import styles from './Modal.module.scss';
 import { Button, Checkbox, EButtonClass, EButtonType, Input } from '@/components/ui';
 import { EInputType } from '@/components/ui/input/Input';
 import Image from 'next/image';
 import { CloseIcon } from '@/components/icons';
 import { ModalContext } from '@/context';
+import styles from './Modal.module.scss';
 
 interface IFormData {
   phone: string | null;
@@ -23,6 +23,18 @@ const Modal: React.FC = () => {
     comment: null,
     isChecked: false,
   });
+
+  useEffect(() => {
+    if (context?.isModalOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [context?.isModalOpen]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -48,18 +60,6 @@ const Modal: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    if (context?.isModalOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [context?.isModalOpen]);
-
   return (
     <div className={`${styles.modal} ${context?.isModalOpen && styles.open}`}>
       <div className={styles.modalInner} ref={modalInnerRef}>
@@ -73,7 +73,7 @@ const Modal: React.FC = () => {
           <div className={styles.formTitles}>
             <div className={styles.title}>Обратный звонок</div>
             <div className={styles.description}>
-              Заполните форму ниже, и наш специалист свяжется с вами в ближайшее время.
+              Заполните форму ниже, и наш специалист свяжется c вами в ближайшее время.
             </div>
           </div>
           <div className={styles.inputs}>

@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from './Questions.module.scss';
 import Image from 'next/image';
 import { Button, Checkbox, EButtonClass, EButtonType, Input } from '@/components/ui';
 import { EInputType } from '@/components/ui/input/Input';
+import styles from './Questions.module.scss';
 
 interface IFormData {
   phone: string | null;

@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button, EButtonClass } from '@/components/ui';
+import { ModalContext } from '@/context';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,7 +12,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 import styles from './Slider.module.scss';
-import { ModalContext } from '@/context';
 
 const slides = [
   {

@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './HeroCards.module.scss';
 import SaleCard from '../saleCard/SaleCard';
 import PhotoCard from '../photoCard/PhotoCard';
+import styles from './HeroCards.module.scss';
 
 const HeroCards: React.FC = () => {
   return (

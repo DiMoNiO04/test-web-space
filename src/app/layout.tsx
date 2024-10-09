@@ -1,6 +1,6 @@
-import { Footer, Header, ModalProvider } from '@/components/layouts';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { Footer, Header, ModalProvider } from '@/components/layouts';
 import '../styles/index.scss';
 
 const involveFont = localFont({
@@ -26,7 +26,7 @@ const helveticaFont = localFont({
 
 export const metadata: Metadata = {
   title: 'Строительные решения',
-  description: 'Создадим ваш идеальный дом в установленные сроки и с 10-летней гарантией | Строительные решения',
+  description: 'Создадим ваш идеальный дом в установленные сроки и c 10-летней гарантией | Строительные решения',
 };
 
 export default function RootLayout({

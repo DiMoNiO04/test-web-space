@@ -13,13 +13,16 @@
   background-color: $accent2600;
 }
 
-.container {
-  padding: 24px 0;
+.container,
+.info {
   @include flexCenterBetween;
 }
 
+.container {
+  padding: 24px 0;
+}
+
 .info {
-  @include flexCenterBetween;
   column-gap: 64px;
 }
 

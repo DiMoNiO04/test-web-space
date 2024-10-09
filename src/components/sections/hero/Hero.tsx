@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Hero.module.scss';
 import { HeroCards, Slider } from '@/components/blocks';
+import styles from './Hero.module.scss';
 
 const Hero: React.FC = () => {
   return (

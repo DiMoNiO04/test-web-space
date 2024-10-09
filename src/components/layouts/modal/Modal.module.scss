@@ -1,10 +1,10 @@
 .modal {
-  position: fixed;
   @include fullSize;
   @include flexCenter;
-  background: #011b1b99;
-  z-index: -100;
   @include hidden;
+  background: #011b1b99;
+  position: fixed;
+  z-index: -100;
   transition:
     opacity 0.3s ease,
     visibility 0.3s ease,
@@ -15,28 +15,28 @@
 }
 
 .open {
-  z-index: 100;
   @include visible;
+  z-index: 100;
 }
 
 .modalInner {
   @include sizes(660px, 100%);
+  @include noScrollLine;
   max-height: 754px;
   background-color: $bg100;
   position: relative;
   overflow: scroll;
-  @include noScrollLine;
 }
 
 .closeBtn {
   @include sizes(38px, 38px);
+  @include flexCenter;
+  @include transition(background-color);
   border-radius: 50%;
   position: absolute;
   top: 16px;
   right: 16px;
   background-color: $accent2300;
-  @include flexCenter;
-  @include transition(background-color);
 
   @include hover {
     background-color: $accent2600;
@@ -73,8 +73,8 @@
 }
 
 .inputs {
-  margin-bottom: 24px;
   @include flexColumn;
+  margin-bottom: 24px;
   row-gap: 16px;
 }
 

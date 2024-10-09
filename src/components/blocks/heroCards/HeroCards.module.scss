@@ -1,11 +1,14 @@
+.cards,
+.cardsRow {
+  width: fit-content;
+}
+
 .cards {
   @include grid(1);
-  width: fit-content;
 }
 
 .cardsRow {
   @include grid(2);
-  width: fit-content;
 }
 
 @media (max-width: $tablet) {
@@ -15,10 +18,10 @@
   }
 
   .cards {
+    @include noScrollLine;
     overflow: scroll;
     padding: 0 20px;
     width: 100%;
-    @include noScrollLine;
   }
 
   .cardsRow:nth-child(2) {
