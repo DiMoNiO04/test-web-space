@@ -25,6 +25,7 @@
 
   &:disabled {
     background-color: $grey;
+    cursor: default;
   }
 }
 

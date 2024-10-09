@@ -1,11 +1,12 @@
 'use client';
 
 import React, { useContext, useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { Button, Checkbox, EButtonClass, EButtonType, Input } from '@/components/ui';
 import { EInputType } from '@/components/ui/input/Input';
-import Image from 'next/image';
 import { CloseIcon } from '@/components/icons';
 import { ModalContext } from '@/context';
+import { sendMessage } from '@/api/telegram';
 import styles from './Modal.module.scss';
 
 interface IFormData {
@@ -17,6 +18,9 @@ interface IFormData {
 const Modal: React.FC = () => {
   const context = useContext(ModalContext);
   const modalInnerRef = useRef<HTMLDivElement | null>(null);
+  const [isSending, setIsSending] = useState<boolean>(false);
+  const [isSubmitSuccess, setIsSubmitSuccess] = useState<boolean>(false);
+  const [isSubmitNoSuccess, setIsSubmitNoSuccess] = useState<boolean>(false);
 
   const [formData, setFormData] = useState<IFormData>({
     phone: null,
@@ -58,6 +62,34 @@ const Modal: React.FC = () => {
     if (modalInnerRef.current && !modalInnerRef.current.contains(e.target as Node)) {
       context?.closeModal();
     }
+  };
+
+  const handleSubmit = async () => {
+    setIsSending(true);
+    try {
+      const message = `
+          Поступила заявка с сайта! \n
+          Телефон: ${formData.phone}\n
+          Комментарий: ${formData.comment}
+        `;
+
+      await sendMessage(message);
+      resetForm();
+      setIsSubmitSuccess(true);
+    } catch (error) {
+      console.error(error);
+      setIsSubmitNoSuccess(false);
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  const resetForm = () => {
+    setFormData({
+      phone: null,
+      comment: null,
+      isChecked: false,
+    });
   };
 
   return (
@@ -103,7 +135,14 @@ const Modal: React.FC = () => {
               name="isChecked"
               onChange={handleCheckboxChange}
             />
-            <Button nameClass={EButtonClass.DEF} typeBtn={EButtonType.SUBMIT} text="Отправить" isLink={false} />
+            <Button
+              isDisabled={!formData.isChecked || !formData.phone || isSending}
+              nameClass={EButtonClass.DEF}
+              typeBtn={EButtonType.SUBMIT}
+              text={isSending ? 'Отправка...' : 'Отправить'}
+              isLink={false}
+              handle={handleSubmit}
+            />
           </div>
         </div>
       </div>

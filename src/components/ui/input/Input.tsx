@@ -1,5 +1,4 @@
 import React from 'react';
-import { InputMask } from '@react-input/mask';
 import styles from './Input.module.scss';
 
 export enum EInputType {
@@ -50,16 +49,6 @@ const Input: React.FC<IInputProps> = ({
           placeholder={placeholder}
           required={required}
           className={styles.textarea}
-          autoComplete="off"
-        />
-      ) : type === EInputType.PHONE ? (
-        <InputMask
-          mask="+375 (__) ___-__-__"
-          onChange={onChange}
-          placeholder={placeholder}
-          required={required}
-          replacement={{ _: /\d/ }}
-          className={styles.input}
           autoComplete="off"
         />
       ) : (
